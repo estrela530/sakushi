@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/de-suke.unity
+    guid: 29182ec2db56e4346afe6f92d4a40580
   m_configObjects: {}
