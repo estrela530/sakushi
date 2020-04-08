@@ -6,24 +6,23 @@ public class Shadow : MonoBehaviour
 {
     [SerializeField] GameObject Shadow1;
     [SerializeField] GameObject Shadow2;
-    [SerializeField] GameObject gai;//外周部
-    [SerializeField] GameObject tyu;//中心部
     [SerializeField] ModeManager modeManager;
     [SerializeField] IgnitStatus ignitStatus;
-    [SerializeField] int Oshadw1;
-    [SerializeField] int Ishadw1;
+    [SerializeField] int SetShadow1;
+    [SerializeField] int SetShadow2;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-
+        Shadow1.gameObject.SetActive(false);
+        Shadow2.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         //影1の出現
-        if (modeManager.NowOutMode() == Oshadw1 && ignitStatus.GetIgnit())
+        if (modeManager.NowOutMode() == SetShadow1 && ignitStatus.GetIgnit())
         {
             //着火の時
             Shadow1.gameObject.SetActive(true);
@@ -33,7 +32,7 @@ public class Shadow : MonoBehaviour
             Shadow1.gameObject.SetActive(false);
         }
         //影2の出現
-        if (modeManager.NowInMode() == Ishadw1 && !ignitStatus.GetIgnit())
+        if (modeManager.NowOutMode() == SetShadow2 && ignitStatus.GetIgnit())
         {
             //鎮火の時
             Shadow2.gameObject.SetActive(true);
