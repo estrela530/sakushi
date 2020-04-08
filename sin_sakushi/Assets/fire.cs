@@ -15,6 +15,6 @@ public class fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gai.transform.ro)
+        
     }
 }
