@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ChangeManager : MonoBehaviour
 {
-    [SerializeField, Header("外周部の親オブジェクト")]
+    [SerializeField]
     OutCameraRotate outRotate;
-    [SerializeField, Header("中心部の親オブジェクト")]
+    [SerializeField]
     InCameraRotate inRotate;
 
     [SerializeField]
