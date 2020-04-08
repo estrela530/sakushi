@@ -9,14 +9,10 @@ public class Shadow : MonoBehaviour
     public GameObject gai;//外周部
     public GameObject tyu;//中心部
     [SerializeField] ModeManager modeManager;
-    [SerializeField] int Osha1;//影1の出現条件
-    [SerializeField] int Isha2;//影2の出現条件
-    [SerializeField] IgnitStatus ignitStatus;
 
     // Start is called before the first frame update
     void Start()
     { 
-        
     }
 
     // Update is called once per frame
@@ -27,13 +23,9 @@ public class Shadow : MonoBehaviour
             return;
         }
         //影1の出現
-        if (modeManager.NowOutMode()== Osha1 && ignitStatus.GetIgnit())
+        if (modeManager.NowOutMode()== 2)
         {
-            //着火してる時に
-            //外周部が0度の時   1
-            //外周部が90度の時  2
-            //外周部が180度の時 3
-            //外周部が-90度の時 4
+            //外周部が90度の時に出現
             Shadow1.gameObject.SetActive(true);
         }
         else
@@ -41,13 +33,9 @@ public class Shadow : MonoBehaviour
             Shadow1.gameObject.SetActive(false);
         }
         //影2の出現
-        if (modeManager.NowInMode() == Isha2 && !ignitStatus.GetIgnit())
+        if (modeManager.NowInMode() == 3)
         {
-            //鎮火してる時に
-            //中心部が0度の時   1
-            //中心部が90度の時  2
-            //中心部が180度の時 3
-            //中心部が-90度の時 4
+            //中心部が180度の時に出現
             Shadow2.gameObject.SetActive(true);
         }
         else
