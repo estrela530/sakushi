@@ -1440,6 +1440,7 @@ MonoBehaviour:
   Shadow2: {fileID: 415880258}
   gai: {fileID: 287402078}
   tyu: {fileID: 1153302228}
+  modeManager: {fileID: 1599617778}
 --- !u!4 &1676820689
 Transform:
   m_ObjectHideFlags: 0
