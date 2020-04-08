@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\SoundOnOff.cs" />
     <Compile Include="Assets\Scripts\Status\IgnitStatus.cs" />
     <Compile Include="Assets\fire.cs" />
+    <None Include="Assets\Material\kari\a.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/K018A1815/Desktop/2020Game/sin_sakushi/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
