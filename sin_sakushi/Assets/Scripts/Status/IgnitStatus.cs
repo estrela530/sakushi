@@ -23,7 +23,7 @@ public class IgnitStatus : MonoBehaviour
     {
         if(ignit)
         {
-            if (Physics.Raycast(ray, out hit, 160.0f)) ;
+            if (Physics.Raycast(ray, out hit, 160.0f)) 
             {
                 hit.collider.GetComponent<MeshRenderer>().material.color = Color.red;
                 Debug.DrawRay(transform.position, transform.forward * 160.0f, Color.yellow);
