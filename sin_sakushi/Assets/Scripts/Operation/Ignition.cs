@@ -20,11 +20,12 @@ public class Ignition : MonoBehaviour
     // Update is called once per frame  
     void Update()
     {
+        //着火状態
         if (status.GetIgnit())
         {
             GetComponent<Renderer>().material = fireMat;
             
-        }
+        }//鎮火状態
         else
         {
             GetComponent<Renderer>().material = normalMat;
