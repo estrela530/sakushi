@@ -7,9 +7,10 @@ public class IgnitStatus : MonoBehaviour
     [SerializeField]
     bool ignit;
 
-    Ray ray;
-    RaycastHit hit;
-
+    Ray ray;//今はつかってないよ
+    RaycastHit hit;//I don't use now
+    public GameObject fire;//台座のx軸の直線状にあるやつ
+    public GameObject gai;//外回り見てるよ
     
     // Start is called before the first frame update
     void Start()
