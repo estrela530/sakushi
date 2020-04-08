@@ -10,6 +10,8 @@ public class Ignition : MonoBehaviour
     [SerializeField]
     Material normalMat;
 
+    
+
     private void Start()
     {
         status = gameObject.GetComponent<IgnitStatus>();
@@ -21,6 +23,7 @@ public class Ignition : MonoBehaviour
         if (status.GetIgnit())
         {
             GetComponent<Renderer>().material = fireMat;
+            
         }
         else
         {
