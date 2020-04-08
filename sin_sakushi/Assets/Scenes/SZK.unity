@@ -1615,12 +1615,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shadow1: {fileID: 1453340297}
   Shadow2: {fileID: 415880258}
-  gai: {fileID: 287402078}
-  tyu: {fileID: 1153302228}
   modeManager: {fileID: 1599617778}
   ignitStatus: {fileID: 1988864043}
-  Oshadw1: 2
-  Ishadw1: 3
+  SetShadow1: 2
+  SetShadow2: 2
 --- !u!4 &1676820689
 Transform:
   m_ObjectHideFlags: 0
