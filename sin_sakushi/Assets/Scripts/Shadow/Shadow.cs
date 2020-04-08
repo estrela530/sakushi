@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Shadow : MonoBehaviour
 {
-    public GameObject Shadow1;
-    public GameObject Shadow2;
-    public GameObject gai;//外周部
-    public GameObject tyu;//中心部
+    [SerializeField] GameObject Shadow1;
+    [SerializeField] GameObject Shadow2;
+    [SerializeField] GameObject gai;//外周部
+    [SerializeField] GameObject tyu;//中心部
+    [SerializeField] ModeManager modeManager;
+    [SerializeField] IgnitStatus ignitStatus;
+    [SerializeField] int Oshadw1;
+    [SerializeField] int Ishadw1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +23,9 @@ public class Shadow : MonoBehaviour
     void Update()
     {
         //影1の出現
-        if (gai.transform.rotation.y == 0)
+        if (modeManager.NowOutMode() == Oshadw1 && ignitStatus.GetIgnit())
         {
+            //着火の時
             Shadow1.gameObject.SetActive(true);
         }
         else
@@ -27,8 +33,9 @@ public class Shadow : MonoBehaviour
             Shadow1.gameObject.SetActive(false);
         }
         //影2の出現
-        if (gai.transform.rotation.y == 180)
+        if (modeManager.NowInMode() == Ishadw1 && !ignitStatus.GetIgnit())
         {
+            //鎮火の時
             Shadow2.gameObject.SetActive(true);
         }
         else
