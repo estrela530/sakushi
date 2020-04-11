@@ -65,8 +65,10 @@
     <Compile Include="Assets\Scripts\Gizmo.cs" />
     <Compile Include="Assets\Scripts\Manager\ChangeManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ClearManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\ClearReset.cs" />
     <Compile Include="Assets\Scripts\Manager\GameEnd.cs" />
     <Compile Include="Assets\Scripts\Manager\IgnitManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\InOutMaterial.cs" />
     <Compile Include="Assets\Scripts\Manager\ModeManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ResetManager.cs" />
     <Compile Include="Assets\Scripts\Operation\Ignition.cs" />
@@ -78,31 +80,31 @@
     <Compile Include="Assets\Scripts\fire.cs" />
     <None Include="Assets\Material\kari\Back.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/K018A1462_seisaku/unity/sakushi/sin_sakushi/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/K018A1462/Downloads/sin_sakushi/sin_sakushi/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
