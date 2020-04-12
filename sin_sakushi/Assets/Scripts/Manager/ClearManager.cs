@@ -13,6 +13,9 @@ public class ClearManager : MonoBehaviour
     [SerializeField,Header("クリア関係のCanvas")]
     GameObject ClearCanvas;
 
+    [SerializeField, Header("モードマネージャー")]
+    ModeManager modeManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +44,39 @@ public class ClearManager : MonoBehaviour
             }
         }
 
-        
+        switch (modeManager.NowInMode())
+        {
+            case 1:
+                if(modeManager.NowOutMode() != 3)
+                {
+                    ClearCanvas.SetActive(false);
+                    return;
+                }
+                break;
+            case 2:
+                if (modeManager.NowOutMode() != 4)
+                {
+                    ClearCanvas.SetActive(false);
+                    return;
+                }
+                break;
+            case 3:
+                if (modeManager.NowOutMode() != 1)
+                {
+                    ClearCanvas.SetActive(false);
+                    return;
+                }
+                break;
+            case 4:
+                if (modeManager.NowOutMode() != 2)
+                {
+                    ClearCanvas.SetActive(false);
+                    return;
+                }
+                break;
+            default:
+                break;
+        }
 
         ClearCanvas.SetActive(true);
     }

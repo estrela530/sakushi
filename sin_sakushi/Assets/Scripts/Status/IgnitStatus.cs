@@ -43,4 +43,9 @@ public class IgnitStatus : MonoBehaviour
     {
         ignit = !ignit;
     }
+
+    public void SetIgnit(bool ign)
+    {
+        ignit = ign;
+    }
 }
