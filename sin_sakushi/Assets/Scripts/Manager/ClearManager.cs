@@ -16,7 +16,7 @@ public class ClearManager : MonoBehaviour
     [SerializeField, Header("モードマネージャー")]
     ModeManager modeManager;
 
-    [SerializeField, Header("クリアのための内外の差分の数字(例:内1の外3がクリア例だったら2を入れる)")]
+    [SerializeField, Header("クリアが内が1の時の外との差分の数字(例:内1の外3がクリアの場合2を入れる)")]
     int clearNum;
 
     // Start is called before the first frame update
