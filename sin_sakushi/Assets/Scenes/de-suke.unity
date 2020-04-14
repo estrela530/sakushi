@@ -492,6 +492,10 @@ PrefabInstance:
       propertyPath: modeManager
       value: 
       objectReference: {fileID: 886883449}
+    - target: {fileID: 868707856, guid: d4d5bbbc989e3a84687c5a20fe45d8d7, type: 3}
+      propertyPath: clearNum
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2257423315838620894, guid: d4d5bbbc989e3a84687c5a20fe45d8d7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

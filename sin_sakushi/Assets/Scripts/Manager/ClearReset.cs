@@ -22,9 +22,4 @@ public class ClearReset : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
-    public void ResetCansel()
-    {
-        resetCanvas.SetActive(false);
-    }
 }
