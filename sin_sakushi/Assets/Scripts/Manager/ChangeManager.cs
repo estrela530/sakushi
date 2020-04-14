@@ -22,6 +22,7 @@ public class ChangeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //内外どっちを回すかの変更
         if (Input.GetKeyDown(KeyCode.W))
         {
             modeManager.ChangeInOut();

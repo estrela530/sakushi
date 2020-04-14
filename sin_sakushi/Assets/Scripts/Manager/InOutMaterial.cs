@@ -18,16 +18,15 @@ public class InOutMaterial : MonoBehaviour
 
     [SerializeField]
     Material notOperateMat;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
+        //動かす側のマテリアルを赤く
+        //動かさない側のマテリアルを青く
+
+        //現在の回すのが外側
         if (modeManager.GetFalseInTrueOut())
         {
             foreach (Transform child in outParent)
@@ -42,7 +41,7 @@ public class InOutMaterial : MonoBehaviour
             {
                 child.gameObject.GetComponent<Renderer>().material = notOperateMat;
             }
-        }
+        }//現在の回すのが内側
         else if (!modeManager.GetFalseInTrueOut())
         {
             foreach (Transform child in inParent)
