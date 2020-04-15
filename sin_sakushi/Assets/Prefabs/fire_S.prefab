@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4687011982185505616}
   m_Layer: 0
-  m_Name: fire_M
+  m_Name: fire_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 2950918753528239357}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.87, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 6137946042145892173}
   - {fileID: 127299210857058211}
@@ -4814,7 +4814,7 @@ Transform:
   m_GameObject: {fileID: 3693130327668193570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children: []
   m_Father: {fileID: 6693544572584277948}
   m_RootOrder: 1
@@ -9568,7 +9568,7 @@ Transform:
   m_GameObject: {fileID: 3821873227247804555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children: []
   m_Father: {fileID: 6693544572584277948}
   m_RootOrder: 0

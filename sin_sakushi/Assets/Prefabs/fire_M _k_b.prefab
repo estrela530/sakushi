@@ -4781,7 +4781,7 @@ Transform:
   m_GameObject: {fileID: 2419809415925881255}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.18, y: -0.59, z: -0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 14, y: 14, z: 14}
   m_Children:
   - {fileID: 3084564890484474203}
   - {fileID: 7525571387633501052}
@@ -14274,7 +14274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6492124256969313551}
   m_Layer: 0
-  m_Name: fire_L (3)
+  m_Name: fire_M _k_b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
