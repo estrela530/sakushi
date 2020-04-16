@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Gizmo.cs" />
     <Compile Include="Assets\Scripts\Manager\ChangeManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\ClearManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameEnd.cs" />
     <Compile Include="Assets\Scripts\Manager\IgnitManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ModeManager.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\Rotate\InCameraRotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\OutCameraRotate.cs" />
     <Compile Include="Assets\Scripts\Shadow\Shadow.cs" />
+    <Compile Include="Assets\Scripts\Shadow\ShadowScale.cs" />
     <Compile Include="Assets\Scripts\SoundOnOff.cs" />
     <Compile Include="Assets\Scripts\Status\IgnitStatus.cs" />
     <Compile Include="Assets\fire.cs" />

@@ -12,6 +12,7 @@ public class Shadow : MonoBehaviour
     [SerializeField] IgnitStatus ignitStatus;
     [SerializeField] int Oshadw1;
     [SerializeField] int Ishadw1;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,5 @@ public class Shadow : MonoBehaviour
         {
             Shadow2.gameObject.SetActive(false);
         }
-
-
     }
 }
