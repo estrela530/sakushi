@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class IgnitStatus : MonoBehaviour
 {
-    [SerializeField]
+    //着火鎮火
     bool ignit;
     
     //炎のサイズ 0:無 1:小 2:中 3:大
     int fireSize;
+
+    //カーソルがあってるか
+    bool cursol;
     
     // Start is called before the first frame update
     void Start()
@@ -16,18 +19,25 @@ public class IgnitStatus : MonoBehaviour
         ignit = false;
         fireSize = 0;
     }
+
+    void Update()
+    {
+        if (fireSize > 0)
+        {
+            ignit = true;
+        }
+        else
+        {
+            ignit = false;
+        }
+    }
     
 
     public bool GetIgnit()
     {
         return ignit;
     }
-
-    public void ChangeIgnit()
-    {
-        ignit = !ignit;
-        SetFireSize(2);
-    }
+    
 
     public void SetIgnit(bool ign)
     {
@@ -57,5 +67,41 @@ public class IgnitStatus : MonoBehaviour
         {
             fireSize = 3;
         }
+    }
+
+    /// <summary>
+    /// 炎の大きさを大きくする
+    /// </summary>
+    public void PlusFireSize()
+    {
+        if (fireSize < 3)
+        {
+            fireSize++;
+        }
+    }
+
+    /// <summary>
+    /// 炎の大きさを小さくする
+    /// </summary>
+    public void MinusFireSize()
+    {
+        if (fireSize > 0)
+        {
+            fireSize--;
+        }
+    }
+
+    /// <summary>
+    /// カーソルがあってるかどうか
+    /// </summary>
+    /// <returns></returns>
+    public bool GetCursol()
+    {
+        return cursol;
+    }
+
+    public void SetCursol(bool setCur)
+    {
+        cursol = setCur;
     }
 }

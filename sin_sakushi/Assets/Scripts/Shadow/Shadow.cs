@@ -6,183 +6,89 @@ public class Shadow : MonoBehaviour
 {
     [SerializeField] GameObject Shadow1;
     [SerializeField] GameObject Shadow2;
-    [SerializeField] GameObject Shadow3;
-    [SerializeField] GameObject Shadow4;
+    [SerializeField] GameObject gai;//外周部
+    [SerializeField] GameObject tyu;//中心部
     [SerializeField] ModeManager modeManager;
     [SerializeField] IgnitStatus ignitStatus;
-    [SerializeField] int SetShadow1;
-    [SerializeField] int SetShadow2;
-    [SerializeField] int SetShadow3;
-    [SerializeField] int SetShadow4;
+    [SerializeField] int Oshadw1;
+    [SerializeField] int Ishadw1;
 
-    private void Start()
+    //[SerializeField] float ShadowSizeX;//影のサイズX
+    //[SerializeField] float ShadowSizeY;//影のサイズY
+    //[SerializeField] float ShadowSizeZ;//影のサイズZ
+    //[SerializeField] int SizeMul;//倍する値
+    //[SerializeField] int SizeDiv;//割る値
+    //int a;//代用
+
+    // Start is called before the first frame update
+    void Start()
     {
-        Shadow1.gameObject.SetActive(false);
-        Shadow2.gameObject.SetActive(false);
-        Shadow3.gameObject.SetActive(false);
-        Shadow4.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!ignitStatus.GetIgnit())
+        //影1の出現
+        if (modeManager.NowOutMode() == Oshadw1 && ignitStatus.GetIgnit())
+        {
+            //着火の時
+            Shadow1.gameObject.SetActive(true);
+        }
+        else
         {
             Shadow1.gameObject.SetActive(false);
-            Shadow2.gameObject.SetActive(false);
-            Shadow3.gameObject.SetActive(false);
-            Shadow4.gameObject.SetActive(false);
-            return;
-        }
-        //影1の出現
-        if (modeManager.NowOutMode() == SetShadow1)
-        {
-            //着火の時
-            //中が1
-            if (modeManager.NowInMode() == 1)
-            {
-                Shadow1.gameObject.SetActive(true);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
-            //中が2
-            else if (modeManager.NowInMode() == 2)
-            {
-                Debug.Log("aa");
-                Shadow4.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-            }
-            //中が3
-            else if (modeManager.NowInMode() == 3)
-            {
-                Shadow3.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
-            //中が4
-            else if (modeManager.NowInMode() == 4)
-            {
-                Shadow2.gameObject.SetActive(true);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-                Shadow1.gameObject.SetActive(false);
-            }
         }
         //影2の出現
-        else if (modeManager.NowOutMode() == SetShadow2)
+        if (modeManager.NowInMode() == Ishadw1 && !ignitStatus.GetIgnit())
         {
-            //着火の時
-            //中が1
-            if (modeManager.NowInMode() == 1)
-            {
-                Shadow2.gameObject.SetActive(true);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-                Shadow1.gameObject.SetActive(false);
-            }
-            //中が2
-            else if (modeManager.NowInMode() == 2)
-            {
-                Shadow1.gameObject.SetActive(true);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
-            //中が3
-            else if (modeManager.NowInMode() == 3)
-            {
-                Shadow4.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-            }
-            //中が4
-            else if (modeManager.NowInMode() == 4)
-            {
-                Shadow3.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
+            //鎮火の時
+            Shadow2.gameObject.SetActive(true);
         }
-        //影3の出現
-        else if (modeManager.NowOutMode() == SetShadow3)
+        else
         {
-            //着火の時
-            //中が1
-            if (modeManager.NowInMode() == 1)
-            {
-                Shadow3.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
-            //中が2
-            else if (modeManager.NowInMode() == 2)
-            {
-                Shadow2.gameObject.SetActive(true);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-                Shadow1.gameObject.SetActive(false);
-            }
-            //中が3
-            else if (modeManager.NowInMode() == 3)
-            {
-                Shadow1.gameObject.SetActive(true);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
-            //中が4
-            else if (modeManager.NowInMode() == 4)
-            {
-                Shadow4.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-            }
+            Shadow2.gameObject.SetActive(false);
         }
-        //影4の出現
-        else if (modeManager.NowOutMode() == SetShadow4)
-        {
-            //着火の時
-            //中が1
-            if (modeManager.NowInMode() == 1)
-            {
-                Shadow4.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-            }
-            //中が2
-            else if (modeManager.NowInMode() == 2)
-            {
-                Shadow3.gameObject.SetActive(true);
-                Shadow1.gameObject.SetActive(false);
-                Shadow2.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
-            //中が3
-            else if (modeManager.NowInMode() == 3)
-            {
-                Shadow2.gameObject.SetActive(true);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-                Shadow1.gameObject.SetActive(false);
-            }
-            //中が4
-            else if (modeManager.NowInMode() == 4)
-            {
-                Shadow1.gameObject.SetActive(true);
-                Shadow2.gameObject.SetActive(false);
-                Shadow3.gameObject.SetActive(false);
-                Shadow4.gameObject.SetActive(false);
-            }
-        }
-
+        //ShadowSize();
     }
+    //void ShadowSize()
+    //{
+    //    //Shadow1が出現中
+    //    if (Shadow1)
+    //    {
+    //       switch(a)
+    //       {
+    //           //標準
+    //           case 1:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+    //               break;
+    //           //倍
+    //           case 2:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX* SizeMul, ShadowSizeY* SizeMul, ShadowSizeZ* SizeMul);
+    //               break;
+    //           //小さく
+    //           case 3:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+    //               break;
+    //       }
+    //    }
+    //    if (Shadow2)
+    //    {
+    //         switch(a)
+    //       {
+    //           //標準
+    //           case 1:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+    //               break;
+    //           //倍
+    //           case 2:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX* SizeMul, ShadowSizeY* SizeMul, ShadowSizeZ* SizeMul);
+    //               break;
+    //           //小さく
+    //           case 3:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+    //               break;
+    //       }
+    //    }
+    //}
 }
