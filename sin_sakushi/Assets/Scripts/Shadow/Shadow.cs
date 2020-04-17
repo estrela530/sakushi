@@ -12,7 +12,13 @@ public class Shadow : MonoBehaviour
     [SerializeField] IgnitStatus ignitStatus;
     [SerializeField] int Oshadw1;
     [SerializeField] int Ishadw1;
-    
+
+    //[SerializeField] float ShadowSizeX;//影のサイズX
+    //[SerializeField] float ShadowSizeY;//影のサイズY
+    //[SerializeField] float ShadowSizeZ;//影のサイズZ
+    //[SerializeField] int SizeMul;//倍する値
+    //[SerializeField] int SizeDiv;//割る値
+    //int a;//代用
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +49,46 @@ public class Shadow : MonoBehaviour
         {
             Shadow2.gameObject.SetActive(false);
         }
+        //ShadowSize();
     }
+    //void ShadowSize()
+    //{
+    //    //Shadow1が出現中
+    //    if (Shadow1)
+    //    {
+    //        //標準
+    //        if (a == 1)
+    //        {
+    //            Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+    //        }
+    //        //倍
+    //        if (a == 2)
+    //        {
+    //            Shadow1.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
+    //        }
+    //        //小さく
+    //        if (a == 3)
+    //        {
+    //            Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+    //        }
+    //    }
+    //    if (Shadow2)
+    //    {
+    //        //標準
+    //        if (a == 1)
+    //        {
+    //            Shadow2.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+    //        }
+    //        //倍
+    //        if (a == 3)
+    //        {
+    //            Shadow2.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
+    //        }
+    //        //小さく
+    //        if (a == 2)
+    //        {
+    //            Shadow2.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+    //        }
+    //    }
+    //}
 }
