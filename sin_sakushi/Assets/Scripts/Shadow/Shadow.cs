@@ -56,39 +56,39 @@ public class Shadow : MonoBehaviour
     //    //Shadow1が出現中
     //    if (Shadow1)
     //    {
-    //        //標準
-    //        if (a == 1)
-    //        {
-    //            Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
-    //        }
-    //        //倍
-    //        if (a == 2)
-    //        {
-    //            Shadow1.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
-    //        }
-    //        //小さく
-    //        if (a == 3)
-    //        {
-    //            Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
-    //        }
+    //       switch(a)
+    //       {
+    //           //標準
+    //           case 1:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+    //               break;
+    //           //倍
+    //           case 2:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX* SizeMul, ShadowSizeY* SizeMul, ShadowSizeZ* SizeMul);
+    //               break;
+    //           //小さく
+    //           case 3:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+    //               break;
+    //       }
     //    }
     //    if (Shadow2)
     //    {
-    //        //標準
-    //        if (a == 1)
-    //        {
-    //            Shadow2.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
-    //        }
-    //        //倍
-    //        if (a == 3)
-    //        {
-    //            Shadow2.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
-    //        }
-    //        //小さく
-    //        if (a == 2)
-    //        {
-    //            Shadow2.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
-    //        }
+    //         switch(a)
+    //       {
+    //           //標準
+    //           case 1:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+    //               break;
+    //           //倍
+    //           case 2:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX* SizeMul, ShadowSizeY* SizeMul, ShadowSizeZ* SizeMul);
+    //               break;
+    //           //小さく
+    //           case 3:
+    //               Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+    //               break;
+    //       }
     //    }
     //}
 }

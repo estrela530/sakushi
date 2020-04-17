@@ -17,7 +17,7 @@ public class ShadowScale : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        a = 1;
     }
 
     // Update is called once per frame
@@ -44,38 +44,40 @@ public class ShadowScale : MonoBehaviour
         //Shadow1が出現中
         if (Shadow1)
         {
-            //標準
-            if (a == 1)
+            switch(a)
             {
-                Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+                //標準
+                case 1:
+                    Shadow1.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+                    break;
+                //倍
+                case 2:
+                    Shadow1.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
+                    break;
+                //小さく
+                case 3:
+                    Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+                    break;
             }
-            //倍
-            if (a == 2)
-            {
-                Shadow1.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
-            }
-            //小さく
-            if (a == 3)
-            {
-                Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
-            }
+           
         }
+        //Shadow2が出現中
         if (Shadow2)
         {
-            //標準
-            if (a == 1)
+            switch (a)
             {
-                Shadow2.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
-            }
-            //倍
-            if (a == 3)
-            {
-                Shadow2.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
-            }
-            //小さく
-            if (a == 2)
-            {
-                Shadow2.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+                //標準
+                case 1:
+                    Shadow2.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+                    break;
+                //倍
+                case 2:
+                    Shadow2.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
+                    break;
+                //小さく
+                case 3:
+                    Shadow2.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+                    break;
             }
         }
     }
