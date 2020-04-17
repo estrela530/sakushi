@@ -60,5 +60,23 @@ public class ShadowScale : MonoBehaviour
                 Shadow1.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
             }
         }
+        if (Shadow2)
+        {
+            //標準
+            if (a == 1)
+            {
+                Shadow2.transform.localScale = new Vector3(ShadowSizeX, ShadowSizeY, ShadowSizeZ);
+            }
+            //倍
+            if (a == 3)
+            {
+                Shadow2.transform.localScale = new Vector3(ShadowSizeX * SizeMul, ShadowSizeY * SizeMul, ShadowSizeZ * SizeMul);
+            }
+            //小さく
+            if (a == 2)
+            {
+                Shadow2.transform.localScale = new Vector3(ShadowSizeX / SizeDiv, ShadowSizeY / SizeDiv, ShadowSizeZ / SizeDiv);
+            }
+        }
     }
 }
