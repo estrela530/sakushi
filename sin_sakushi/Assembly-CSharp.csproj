@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Rotate\InCameraRotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\OutCameraRotate.cs" />
     <Compile Include="Assets\Scripts\Shadow\Shadow.cs" />
+    <Compile Include="Assets\Scripts\Shadow\ShadowScale.cs" />
     <Compile Include="Assets\Scripts\SoundOnOff.cs" />
     <Compile Include="Assets\Scripts\Status\IgnitStatus.cs" />
     <Compile Include="Assets\Scripts\fire.cs" />
