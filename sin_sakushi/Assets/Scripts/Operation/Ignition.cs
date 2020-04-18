@@ -17,6 +17,10 @@ public class Ignition : MonoBehaviour
 
     [SerializeField, Header("炎のパーティクル")]
     GameObject fireParticle;
+    [SerializeField, Header("小炎のパーティクル")]
+    GameObject smallFireParticle;
+    [SerializeField, Header("大炎のパーティクル")]
+    GameObject bigFireParticle;
 
 
     [SerializeField, Header("カーソル選択時のマテリアル")]
@@ -37,7 +41,9 @@ public class Ignition : MonoBehaviour
             GetComponent<Renderer>().material = smallFireMat;
             if (!fireParticle.GetComponentInChildren<ParticleSystem>().isEmitting)
             {
-                fireParticle.GetComponentInChildren<ParticleSystem>().Play();
+                smallFireParticle.GetComponentInChildren<ParticleSystem>().Play();
+                fireParticle.GetComponentInChildren<ParticleSystem>().Stop();
+                bigFireParticle.GetComponentInChildren<ParticleSystem>().Stop();
             }
 
         }//中炎
@@ -47,6 +53,8 @@ public class Ignition : MonoBehaviour
             if (!fireParticle.GetComponentInChildren<ParticleSystem>().isEmitting)
             {
                 fireParticle.GetComponentInChildren<ParticleSystem>().Play();
+                smallFireParticle.GetComponentInChildren<ParticleSystem>().Stop();
+                bigFireParticle.GetComponentInChildren<ParticleSystem>().Stop();
             }
 
         }//大炎
@@ -55,7 +63,9 @@ public class Ignition : MonoBehaviour
             GetComponent<Renderer>().material = bigFireMat;
             if (!fireParticle.GetComponentInChildren<ParticleSystem>().isEmitting)
             {
-                fireParticle.GetComponentInChildren<ParticleSystem>().Play();
+                bigFireParticle.GetComponentInChildren<ParticleSystem>().Play();
+                fireParticle.GetComponentInChildren<ParticleSystem>().Stop();
+                smallFireParticle.GetComponentInChildren<ParticleSystem>().Stop();
             }
 
         }
@@ -64,6 +74,8 @@ public class Ignition : MonoBehaviour
         {
             GetComponent<Renderer>().material = normalMat;
             fireParticle.GetComponentInChildren<ParticleSystem>().Stop();
+            smallFireParticle.GetComponentInChildren<ParticleSystem>().Stop();
+            bigFireParticle.GetComponentInChildren<ParticleSystem>().Stop();
         }
 
         //カーソルあってるとき
