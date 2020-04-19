@@ -57,6 +57,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ButtonSeries\Button1.cs" />
+    <Compile Include="Assets\Scripts\ButtonSeries\Button2.cs" />
+    <Compile Include="Assets\Scripts\ButtonSeries\Button3.cs" />
+    <Compile Include="Assets\Scripts\ButtonSeries\ButtonTitle.cs" />
     <Compile Include="Assets\Scripts\Gizmo.cs" />
     <Compile Include="Assets\Scripts\Manager\ChangeManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ClearManager.cs" />
@@ -67,6 +71,7 @@
     <Compile Include="Assets\Scripts\Manager\InOutMaterial.cs" />
     <Compile Include="Assets\Scripts\Manager\ModeManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ResetManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\SceneChengeManager.cs" />
     <Compile Include="Assets\Scripts\Operation\Ignition.cs" />
     <Compile Include="Assets\Scripts\Rotate\InCameraRotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\OutCameraRotate.cs" />
