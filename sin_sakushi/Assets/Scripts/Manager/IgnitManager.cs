@@ -6,23 +6,50 @@ public class IgnitManager : MonoBehaviour
 {
     string ignitTag = "Pedestal";
 
+    [SerializeField,Header("カーソルがあった時のマテリアル")]
+    Material cursolMat;
+
+    [SerializeField, Header("ConcentrationManager")]
+    Concentration concent;
+
     // Update is called once per frame  
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = new Ray();
-            RaycastHit hit = new RaycastHit();
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = new Ray();
+        RaycastHit hit = new RaycastHit();
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            //マウスクリックした場所からRayを飛ばし、オブジェクトがあればtrue 
-            if (Physics.Raycast(ray.origin, ray.direction, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray.origin, ray.direction, out hit, Mathf.Infinity))
+        {
+            GameObject obj = hit.collider.gameObject;
+
+            
+            if (obj.CompareTag(ignitTag))
             {
-                if (hit.collider.gameObject.CompareTag(ignitTag))
+                IgnitStatus status = obj.GetComponent<IgnitStatus>();
+                status.SetCursol(true);
+
+                if (Input.GetMouseButtonDown(0) && status.GetFireSize() != 3)
                 {
-                    hit.collider.gameObject.GetComponent<IgnitStatus>().ChangeIgnit();
+                    status.PlusFireSize();
+                    concent.MinusConcentration();
+                }
+                else if (Input.GetMouseButtonDown(1) && status.GetFireSize() != 0)
+                {
+                    status.MinusFireSize();
+                    concent.PlusConcentration();
+                }
+                else if (Input.GetMouseButtonDown(2))
+                {
+                    for (int i = 0; i < status.GetFireSize(); i++)
+                    {
+                        concent.PlusConcentration();
+                    }
+                    status.SetFireSize(0);
                 }
             }
+
+            
         }
     }
 }

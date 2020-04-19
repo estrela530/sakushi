@@ -4,43 +4,104 @@ using UnityEngine;
 
 public class IgnitStatus : MonoBehaviour
 {
-    [SerializeField]
+    //着火鎮火
     bool ignit;
+    
+    //炎のサイズ 0:無 1:小 2:中 3:大
+    int fireSize;
 
-    Ray ray;//今はつかってないよ
-    RaycastHit hit;//I don't use now
-    //public GameObject fire;//台座のx軸の直線状にあるやつ
-    //public GameObject gai;//外回り見てるよ
-
+    //カーソルがあってるか
+    bool cursol;
     
     // Start is called before the first frame update
     void Start()
     {
         ignit = false;
-        ray = new Ray(transform.position, transform.forward);
+        fireSize = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //if(ignit)
-        //{
-        //    if (Physics.Raycast(ray, out hit, 160.0f)) 
-        //    {
-        //        hit.collider.GetComponent<MeshRenderer>().material.color = Color.red;
-        //        Debug.DrawRay(transform.position, transform.forward * 160.0f, Color.yellow);
-        //    }
-        //}
+        if (fireSize > 0)
+        {
+            ignit = true;
+        }
+        else
+        {
+            ignit = false;
+        }
     }
+    
 
     public bool GetIgnit()
     {
         return ignit;
-        //GetComponent<BoxCollider>().enabled = true;
+    }
+    
+
+    public void SetIgnit(bool ign)
+    {
+        ignit = ign;
     }
 
-    public void ChangeIgnit()
+    /// <summary>
+    /// 炎の大きさの獲得
+    /// </summary>
+    public int GetFireSize()
     {
-        ignit = !ignit;
+        return fireSize;
+    }
+
+    /// <summary>
+    /// 炎の大きさの設定
+    /// </summary>
+    /// <param name="setFire">0:消 1:小 2:中 3:大</param>
+    public void SetFireSize(int setFire)
+    {
+        fireSize = setFire;
+        if (fireSize < 0)
+        {
+            fireSize = 0;
+        }
+        else if (fireSize > 3)
+        {
+            fireSize = 3;
+        }
+    }
+
+    /// <summary>
+    /// 炎の大きさを大きくする
+    /// </summary>
+    public void PlusFireSize()
+    {
+        if (fireSize < 3)
+        {
+            fireSize++;
+        }
+    }
+
+    /// <summary>
+    /// 炎の大きさを小さくする
+    /// </summary>
+    public void MinusFireSize()
+    {
+        if (fireSize > 0)
+        {
+            fireSize--;
+        }
+    }
+
+    /// <summary>
+    /// カーソルがあってるかどうか
+    /// </summary>
+    /// <returns></returns>
+    public bool GetCursol()
+    {
+        return cursol;
+    }
+
+    public void SetCursol(bool setCur)
+    {
+        cursol = setCur;
     }
 }

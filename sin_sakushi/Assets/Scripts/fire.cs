@@ -43,15 +43,15 @@ public class fire : MonoBehaviour
             //外周部が-90度の時 4
             if (modeManager.NowInMode() == Isha1 && ignitStatus.GetIgnit() || modeManager.NowInMode() == Isha2 && ignitStatus.GetIgnit())
             {
-                
-                    GetComponent<Renderer>().material = flameMat;
-               
-               
+
+                GetComponent<Renderer>().material = flameMat;
+                ignitStatus.SetIgnit(true);
+
             }
-            
-           
+
+
         }
-        
-        
+
+
     }
 }

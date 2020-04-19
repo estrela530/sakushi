@@ -5,6 +5,7 @@ using UnityEngine;
 public class ModeManager : MonoBehaviour
 {
     //true = out false = in
+    [SerializeField]
     bool tOutFIn;
 
     [SerializeField]
@@ -16,44 +17,54 @@ public class ModeManager : MonoBehaviour
     //Right = 1  Left = 2
     int setRigLef;
 
+    //クールタイム用時間
+    [SerializeField]
+    float seconds;
+
     // Start is called before the first frame update
     void Start()
     {
         tOutFIn = true;
         outMode = 1;
         inMode = 1;
+        seconds = 500;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (tOutFIn)
+        if (tOutFIn && seconds >= 2)
         {
             OutModeChange();
         }
-        else
+        else if (!tOutFIn && seconds >= 2)
         {
             InModeChange();
         }
+        seconds += Time.deltaTime;
     }
 
     void OutModeChange()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             switch (outMode)
             {
                 case 1:
                     outMode = 2;
+                    seconds = 0;
                     break;
                 case 2:
                     outMode = 3;
+                    seconds = 0;
                     break;
                 case 3:
                     outMode = 4;
+                    seconds = 0;
                     break;
                 case 4:
                     outMode = 1;
+                    seconds = 0;
                     break;
                 default:
                     break;
@@ -61,21 +72,25 @@ public class ModeManager : MonoBehaviour
             setRigLef = 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             switch (outMode)
             {
                 case 1:
                     outMode = 4;
+                    seconds = 0;
                     break;
                 case 2:
                     outMode = 1;
+                    seconds = 0;
                     break;
                 case 3:
                     outMode = 2;
+                    seconds = 0;
                     break;
                 case 4:
                     outMode = 3;
+                    seconds = 0;
                     break;
                 default:
                     break;
@@ -87,21 +102,25 @@ public class ModeManager : MonoBehaviour
 
     void InModeChange()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             switch (inMode)
             {
                 case 1:
                     inMode = 2;
+                    seconds = 0;
                     break;
                 case 2:
                     inMode = 3;
+                    seconds = 0;
                     break;
                 case 3:
                     inMode = 4;
+                    seconds = 0;
                     break;
                 case 4:
                     inMode = 1;
+                    seconds = 0;
                     break;
                 default:
                     break;
@@ -109,21 +128,25 @@ public class ModeManager : MonoBehaviour
             setRigLef = 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             switch (inMode)
             {
                 case 1:
                     inMode = 4;
+                    seconds = 0;
                     break;
                 case 2:
                     inMode = 1;
+                    seconds = 0;
                     break;
                 case 3:
                     inMode = 2;
+                    seconds = 0;
                     break;
                 case 4:
                     inMode = 3;
+                    seconds = 0;
                     break;
                 default:
                     break;
@@ -151,5 +174,10 @@ public class ModeManager : MonoBehaviour
     public void ChangeInOut()
     {
         tOutFIn = !tOutFIn;
+    }
+
+    public bool GetFalseInTrueOut()
+    {
+        return tOutFIn;
     }
 }
