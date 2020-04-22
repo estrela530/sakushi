@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 958170184192353419}
   m_Layer: 0
-  m_Name: fire_ML _m
+  m_Name: fire_M _m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3379344425100375224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 2.279868, z: -4.08}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3031159187466579277}
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 3705157556448774766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14, y: 14, z: 14}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 3031159187466579277}
   m_RootOrder: 0
@@ -4811,8 +4811,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4034300206528130266}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.18, y: -0.59, z: -0}
-  m_LocalScale: {x: 14, y: 14, z: 14}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children:
   - {fileID: 3642881994533343015}
   - {fileID: 2927712092025027718}
@@ -9568,7 +9568,7 @@ Transform:
   m_GameObject: {fileID: 9112443615055559232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14, y: 14, z: 14}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 3031159187466579277}
   m_RootOrder: 1
