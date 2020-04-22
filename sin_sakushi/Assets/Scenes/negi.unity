@@ -3148,6 +3148,7 @@ GameObject:
   - component: {fileID: 1834208677}
   - component: {fileID: 1834208679}
   - component: {fileID: 1834208678}
+  - component: {fileID: 1834208680}
   m_Layer: 5
   m_Name: Concentration
   m_TagString: Untagged
@@ -3210,6 +3211,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834208676}
   m_CullTransparentMesh: 0
+--- !u!114 &1834208680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834208676}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4be6cb87c3b49479dca10330249fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 1834208678}
+  frameRate: 10
+  folderName: Attack1
+  headText: img_0
+  imageLength: 28
+  IsFirstNum1: 1
+  EnableSkipFirst: 0
 --- !u!1 &1853047322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2257423316324729989, guid: d4d5bbbc989e3a84687c5a20fe45d8d7,
