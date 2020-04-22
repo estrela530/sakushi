@@ -3443,6 +3443,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3877595375092010904, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: flag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877595375092010904, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: fire1
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a3cb269e70c308459a3f08493d13205, type: 3}
     - target: {fileID: 3877595375092010906, guid: 577ffd99fcffab64db179af79c1d83cd,
         type: 3}
       propertyPath: fireParticle
@@ -3473,6 +3483,16 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3877595375478352808, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: flag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877595375478352808, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: fire1
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a3cb269e70c308459a3f08493d13205, type: 3}
     - target: {fileID: 3877595375478352809, guid: 577ffd99fcffab64db179af79c1d83cd,
         type: 3}
       propertyPath: m_audioClip
@@ -3568,6 +3588,16 @@ PrefabInstance:
       propertyPath: modeManager
       value: 
       objectReference: {fileID: 886883449}
+    - target: {fileID: 3877595376616322216, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: flag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877595376616322216, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: fire1
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a3cb269e70c308459a3f08493d13205, type: 3}
     - target: {fileID: 3877595376616322217, guid: 577ffd99fcffab64db179af79c1d83cd,
         type: 3}
       propertyPath: m_audioClip
@@ -3598,6 +3628,16 @@ PrefabInstance:
       propertyPath: smallFireParticle
       value: 
       objectReference: {fileID: 1434845230}
+    - target: {fileID: 3877595376995323625, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: flag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877595376995323625, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: fire1
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a3cb269e70c308459a3f08493d13205, type: 3}
     - target: {fileID: 3877595376995323630, guid: 577ffd99fcffab64db179af79c1d83cd,
         type: 3}
       propertyPath: m_audioClip
@@ -3648,6 +3688,16 @@ PrefabInstance:
       propertyPath: bigFireParticle
       value: 
       objectReference: {fileID: 1684444411}
+    - target: {fileID: 3877595377102738204, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: flag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877595377102738204, guid: 577ffd99fcffab64db179af79c1d83cd,
+        type: 3}
+      propertyPath: fire1
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a3cb269e70c308459a3f08493d13205, type: 3}
     - target: {fileID: 3877595377102738205, guid: 577ffd99fcffab64db179af79c1d83cd,
         type: 3}
       propertyPath: m_audioClip
