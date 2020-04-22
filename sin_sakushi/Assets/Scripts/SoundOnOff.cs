@@ -40,6 +40,10 @@ public class SoundOnOff : MonoBehaviour
             {
                 audioSource.Play();
             }
+            else if (ignitStatus.GetIgnit())
+            {
+                audioSource.Stop();
+            }
             return;
         }
 
