@@ -6,6 +6,8 @@ public class Shadow : MonoBehaviour
 {
     [SerializeField] GameObject Shadow1;
     [SerializeField] GameObject Shadow2;
+    [SerializeField] GameObject Shadow3;
+    [SerializeField] GameObject Shadow4;
     [SerializeField] GameObject gai;//外周部
     [SerializeField] GameObject tyu;//中心部
     [SerializeField] ModeManager modeManager;
@@ -39,6 +41,7 @@ public class Shadow : MonoBehaviour
         {
             Shadow1.gameObject.SetActive(false);
         }
+
         //影2の出現
         if (modeManager.NowInMode() == Ishadw1 && !ignitStatus.GetIgnit())
         {
@@ -48,6 +51,28 @@ public class Shadow : MonoBehaviour
         else
         {
             Shadow2.gameObject.SetActive(false);
+        }
+
+        //影3の出現
+        if (modeManager.NowOutMode() == Oshadw1 && ignitStatus.GetIgnit())
+        {
+            //着火の時
+            Shadow3.gameObject.SetActive(true);
+        }
+        else
+        {
+            Shadow3.gameObject.SetActive(false);
+        }
+
+        //影4の出現
+        if (modeManager.NowInMode() == Ishadw1 && !ignitStatus.GetIgnit())
+        {
+            //鎮火の時
+            Shadow4.gameObject.SetActive(true);
+        }
+        else
+        {
+            Shadow4.gameObject.SetActive(false);
         }
         //ShadowSize();
     }

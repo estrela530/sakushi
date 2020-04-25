@@ -82,6 +82,7 @@ public class ShadowScale : MonoBehaviour
                     break;
             }
         }
+        //Shadow3が出現中
         if (Shadow3)
         {
             switch (a)
@@ -100,6 +101,7 @@ public class ShadowScale : MonoBehaviour
                     break;
             }
         }
+        //Shadow4が出現中
         if (Shadow4)
         {
             switch (a)
