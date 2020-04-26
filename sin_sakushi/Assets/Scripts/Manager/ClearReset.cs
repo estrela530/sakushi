@@ -11,6 +11,10 @@ public class ClearReset : MonoBehaviour
 
     string sceneName;
 
+    [SerializeField,Header("飛ばす先のシーン番号")]
+    int nextSceneNum = 5;
+
+
     private void Start()
     {
         resetCanvas.SetActive(false);
@@ -20,6 +24,7 @@ public class ClearReset : MonoBehaviour
 
     public void SceneReset()
     {
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(nextSceneNum);
     }
 }

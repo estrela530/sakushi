@@ -7,6 +7,8 @@ public class ClearManager : MonoBehaviour
 {
     [SerializeField,Header("着火状態でクリアの台座のリスト")]
     List<IgnitStatus> FirePedestals;
+    [SerializeField, Header("使いづらいけど同じ順番で炎の大きさの設定")]
+    List<int> FireSizeList;
 
     [SerializeField, Header("鎮火状態でクリアの台座のリスト")]
     List<IgnitStatus> ClearPedestals;
@@ -20,8 +22,8 @@ public class ClearManager : MonoBehaviour
     [SerializeField, Header("クリアが内が1の時の外との差分の数字(例:内1の外3がクリアの場合2を入れる)")]
     int clearNum;
 
-    [SerializeField]
-    int nextSceneNum = 5;
+    //[SerializeField]
+    //int nextSceneNum = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +37,7 @@ public class ClearManager : MonoBehaviour
         //着いてるべきところが着いているか
         for (int i = 0; i < FirePedestals.Count; i++)
         {
-            if (!FirePedestals[i].GetIgnit())
+            if (!FirePedestals[i].GetIgnit() || FireSizeList[i] != FirePedestals[i].GetFireSize())
             {
                 ClearCanvas.SetActive(false);
                 return;
@@ -94,6 +96,6 @@ public class ClearManager : MonoBehaviour
         }
 
         ClearCanvas.SetActive(true);
-        SceneManager.LoadSceneAsync(nextSceneNum);
+        //SceneManager.LoadSceneAsync(nextSceneNum);
     }
 }

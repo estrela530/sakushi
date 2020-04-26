@@ -12,6 +12,21 @@ public class IgnitManager : MonoBehaviour
     [SerializeField, Header("ConcentrationManager")]
     Concentration concent;
 
+    [SerializeField, Header("このステージでの炎の最大サイズ")]
+    int MaxFireSize = 3;
+
+    private void Start()
+    {
+        if (MaxFireSize > 3)
+        {
+            MaxFireSize = 3;
+        }
+        else if (MaxFireSize < 1)
+        {
+            MaxFireSize = 1;
+        }
+    }
+
     // Update is called once per frame  
     void Update()
     {
@@ -29,7 +44,7 @@ public class IgnitManager : MonoBehaviour
                 IgnitStatus status = obj.GetComponent<IgnitStatus>();
                 status.SetCursol(true);
 
-                if (Input.GetMouseButtonDown(0) && status.GetFireSize() != 3)
+                if (Input.GetMouseButtonDown(0) && status.GetFireSize() < MaxFireSize)
                 {
                     status.PlusFireSize();
                     concent.MinusConcentration();

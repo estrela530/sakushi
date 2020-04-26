@@ -39,7 +39,7 @@ public class Ignition : MonoBehaviour
         if (status.GetIgnit() && status.GetFireSize() == 1)
         {
             GetComponent<Renderer>().material = smallFireMat;
-            if (!fireParticle.GetComponentInChildren<ParticleSystem>().isEmitting)
+            if (!smallFireParticle.GetComponentInChildren<ParticleSystem>().isEmitting)
             {
                 smallFireParticle.GetComponentInChildren<ParticleSystem>().Play();
                 fireParticle.GetComponentInChildren<ParticleSystem>().Stop();
@@ -61,7 +61,7 @@ public class Ignition : MonoBehaviour
         else if (status.GetIgnit() && status.GetFireSize() == 3)
         {
             GetComponent<Renderer>().material = bigFireMat;
-            if (!fireParticle.GetComponentInChildren<ParticleSystem>().isEmitting)
+            if (!bigFireParticle.GetComponentInChildren<ParticleSystem>().isEmitting)
             {
                 bigFireParticle.GetComponentInChildren<ParticleSystem>().Play();
                 fireParticle.GetComponentInChildren<ParticleSystem>().Stop();
