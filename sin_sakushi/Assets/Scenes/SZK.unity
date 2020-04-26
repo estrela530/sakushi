@@ -3505,8 +3505,8 @@ MonoBehaviour:
   ShadowSizeX: 1.5
   ShadowSizeY: 6
   ShadowSizeZ: 1.5
-  SizeMul: 2
-  SizeDiv: 2
+  SizeMul: 1.2
+  SizeDiv: 1.3
 --- !u!1 &2055116788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1162210885402451945, guid: a45a67469c4304f43a4af012afe1ca68,

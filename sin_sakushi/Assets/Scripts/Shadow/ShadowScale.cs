@@ -13,33 +13,18 @@ public class ShadowScale : MonoBehaviour
     [SerializeField,Header("中間のサイズX")] float ShadowSizeX;//影のサイズX
     [SerializeField,Header("中間のサイズY")] float ShadowSizeY;//影のサイズY
     [SerializeField,Header("中間のサイズZ")] float ShadowSizeZ;//影のサイズZ
-    [SerializeField,Header("倍する数")] int SizeMul;//倍する値
-    [SerializeField,Header("割る数")] int SizeDiv;//割る値
-    int a;//代用
-
+    [SerializeField,Header("倍する数")] float SizeMul;//倍する値
+    [SerializeField,Header("割る数")] float SizeDiv;//割る値
+  
     // Start is called before the first frame update
     void Start()
     {
-        a = 1;
-        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        //デバッグ用
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            a = 1;//標準
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            a = 2;//倍
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            a = 3; //小さく
-        }
         ShaScale();
     }
 
