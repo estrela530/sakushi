@@ -20,8 +20,8 @@ public class ClearManager : MonoBehaviour
     [SerializeField, Header("クリアが内が1の時の外との差分の数字(例:内1の外3がクリアの場合2を入れる)")]
     int clearNum;
 
-    [SerializeField]
-    int nextSceneNum = 5;
+    //[SerializeField]
+    //int nextSceneNum = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +94,6 @@ public class ClearManager : MonoBehaviour
         }
 
         ClearCanvas.SetActive(true);
-        SceneManager.LoadSceneAsync(nextSceneNum);
+        //SceneManager.LoadSceneAsync(nextSceneNum);
     }
 }
