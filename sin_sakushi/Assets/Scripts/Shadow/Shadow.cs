@@ -37,11 +37,11 @@ public class Shadow : MonoBehaviour
        //着火時
         if (ignitStatus.GetIgnit())
         {
-            //内1の時
-            if(modeManager.NowInMode() == 1)
+            //外1の時
+            if (modeManager.NowOutMode() == 1)
             {
-                //外が
-                switch (modeManager.NowOutMode())
+                //内が
+                switch (modeManager.NowInMode())
                 {
                     case 1:
                         Shadow1.gameObject.SetActive(true);
@@ -53,8 +53,8 @@ public class Shadow : MonoBehaviour
                     case 2:
                         Shadow2.gameObject.SetActive(true);
                         Shadow1.gameObject.SetActive(false);
-                        Shadow2.gameObject.SetActive(false);
                         Shadow3.gameObject.SetActive(false);
+                        Shadow4.gameObject.SetActive(false);
                         break;
                     case 3:
                         Shadow3.gameObject.SetActive(true);
@@ -65,49 +65,49 @@ public class Shadow : MonoBehaviour
                     case 4:
                         Shadow4.gameObject.SetActive(true);
                         Shadow1.gameObject.SetActive(false);
+                        Shadow2.gameObject.SetActive(false);
                         Shadow3.gameObject.SetActive(false);
-                        Shadow4.gameObject.SetActive(false);
                         break;
                 }
             }
             //内2の時
-            if (modeManager.NowInMode() == 2)
+            if (modeManager.NowOutMode() == 2)
             {
                 //外が
-                switch (modeManager.NowOutMode())
+                switch (modeManager.NowInMode())
                 {
                     case 1:
-                        Shadow2.gameObject.SetActive(true);
+                        Shadow4.gameObject.SetActive(true);
                         Shadow3.gameObject.SetActive(false);
-                        Shadow4.gameObject.SetActive(false);
+                        Shadow2.gameObject.SetActive(false);
                         Shadow1.gameObject.SetActive(false);
                         break;
 
                     case 2:
-                        Shadow3.gameObject.SetActive(true);
-                        Shadow2.gameObject.SetActive(false);
-                        Shadow3.gameObject.SetActive(false);
-                        Shadow4.gameObject.SetActive(false);
-                        break;
-                    case 3:
-                        Shadow4.gameObject.SetActive(true);
-                        Shadow1.gameObject.SetActive(false);
-                        Shadow2.gameObject.SetActive(false);
-                        Shadow3.gameObject.SetActive(false);
-                        break;
-                    case 4:
                         Shadow1.gameObject.SetActive(true);
                         Shadow2.gameObject.SetActive(false);
                         Shadow3.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
                         break;
+                    case 3:
+                        Shadow2.gameObject.SetActive(true);
+                        Shadow1.gameObject.SetActive(false);
+                        Shadow4.gameObject.SetActive(false);
+                        Shadow3.gameObject.SetActive(false);
+                        break;
+                    case 4:
+                        Shadow3.gameObject.SetActive(true);
+                        Shadow1.gameObject.SetActive(false);
+                        Shadow2.gameObject.SetActive(false);
+                        Shadow4.gameObject.SetActive(false);
+                        break;
                 }
             }
-            //内3の時
-            if (modeManager.NowInMode() == 3)
+            //外3の時
+            if (modeManager.NowOutMode() == 3)
             {
-                //外が
-                switch (modeManager.NowOutMode())
+                //内が
+                switch (modeManager.NowInMode())
                 {
                     case 1:
                         Shadow3.gameObject.SetActive(true);
@@ -117,9 +117,9 @@ public class Shadow : MonoBehaviour
                         break;
 
                     case 2:
-                        Shadow2.gameObject.SetActive(true);
+                        Shadow4.gameObject.SetActive(true);
                         Shadow3.gameObject.SetActive(false);
-                        Shadow4.gameObject.SetActive(false);
+                        Shadow2.gameObject.SetActive(false);
                         Shadow1.gameObject.SetActive(false);
                         break;
                     case 3:
@@ -129,36 +129,36 @@ public class Shadow : MonoBehaviour
                         Shadow4.gameObject.SetActive(false);
                         break;
                     case 4:
-                        Shadow4.gameObject.SetActive(true);
-                        Shadow1.gameObject.SetActive(false);
-                        Shadow2.gameObject.SetActive(false);
-                        Shadow3.gameObject.SetActive(false);
-                        break;
-                }
-            }
-            //内4の時
-            if (modeManager.NowInMode() == 4)
-            {
-                //外が
-                switch (modeManager.NowOutMode())
-                {
-                    case 1:
-                        Shadow4.gameObject.SetActive(true);
-                        Shadow1.gameObject.SetActive(false);
-                        Shadow2.gameObject.SetActive(false);
-                        Shadow3.gameObject.SetActive(false);
-                        break;
-
-                    case 2:
                         Shadow2.gameObject.SetActive(true);
                         Shadow1.gameObject.SetActive(false);
                         Shadow3.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
                         break;
-                    case 3:
+                }
+            }
+            //外4の時
+            if (modeManager.NowOutMode() == 4)
+            {
+                //内が
+                switch (modeManager.NowInMode())
+                {
+                    case 1:
+                        Shadow2.gameObject.SetActive(true);
+                        Shadow1.gameObject.SetActive(false);
+                        Shadow4.gameObject.SetActive(false);
+                        Shadow3.gameObject.SetActive(false);
+                        break;
+
+                    case 2:
                         Shadow3.gameObject.SetActive(true);
+                        Shadow1.gameObject.SetActive(false);
                         Shadow2.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
+                        break;
+                    case 3:
+                        Shadow4.gameObject.SetActive(true);
+                        Shadow2.gameObject.SetActive(false);
+                        Shadow3.gameObject.SetActive(false);
                         Shadow1.gameObject.SetActive(false);
                         break;
                     case 4:
