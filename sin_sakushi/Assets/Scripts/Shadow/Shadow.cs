@@ -38,10 +38,10 @@ public class Shadow : MonoBehaviour
         if (ignitStatus.GetIgnit())
         {
             //外1の時
-            if (modeManager.NowOutMode() == 1)
+            if (modeManager.NowInMode() == 1)
             {
                 //内が
-                switch (modeManager.NowInMode())
+                switch (modeManager.NowOutMode())
                 {
                     case 1:
                         Shadow1.gameObject.SetActive(true);
@@ -71,10 +71,10 @@ public class Shadow : MonoBehaviour
                 }
             }
             //内2の時
-            if (modeManager.NowOutMode() == 2)
+            if (modeManager.NowInMode() == 2)
             {
                 //外が
-                switch (modeManager.NowInMode())
+                switch (modeManager.NowOutMode())
                 {
                     case 1:
                         Shadow4.gameObject.SetActive(true);
@@ -104,10 +104,10 @@ public class Shadow : MonoBehaviour
                 }
             }
             //外3の時
-            if (modeManager.NowOutMode() == 3)
+            if (modeManager.NowInMode() == 3)
             {
                 //内が
-                switch (modeManager.NowInMode())
+                switch (modeManager.NowOutMode())
                 {
                     case 1:
                         Shadow3.gameObject.SetActive(true);
@@ -137,10 +137,10 @@ public class Shadow : MonoBehaviour
                 }
             }
             //外4の時
-            if (modeManager.NowOutMode() == 4)
+            if (modeManager.NowInMode() == 4)
             {
                 //内が
-                switch (modeManager.NowInMode())
+                switch (modeManager.NowOutMode())
                 {
                     case 1:
                         Shadow2.gameObject.SetActive(true);

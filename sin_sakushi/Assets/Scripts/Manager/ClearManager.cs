@@ -94,6 +94,6 @@ public class ClearManager : MonoBehaviour
         }
 
         ClearCanvas.SetActive(true);
-        SceneManager.LoadSceneAsync(nextSceneNum);
+        //SceneManager.LoadSceneAsync(nextSceneNum);
     }
 }
