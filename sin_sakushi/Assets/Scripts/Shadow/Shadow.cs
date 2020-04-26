@@ -51,7 +51,7 @@ public class Shadow : MonoBehaviour
                         break;
 
                     case 2:
-                        Shadow4.gameObject.SetActive(true);
+                        Shadow2.gameObject.SetActive(true);
                         Shadow1.gameObject.SetActive(false);
                         Shadow2.gameObject.SetActive(false);
                         Shadow3.gameObject.SetActive(false);
@@ -63,7 +63,7 @@ public class Shadow : MonoBehaviour
                         Shadow4.gameObject.SetActive(false);
                         break;
                     case 4:
-                        Shadow2.gameObject.SetActive(true);
+                        Shadow4.gameObject.SetActive(true);
                         Shadow1.gameObject.SetActive(false);
                         Shadow3.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
@@ -84,7 +84,7 @@ public class Shadow : MonoBehaviour
                         break;
 
                     case 2:
-                        Shadow1.gameObject.SetActive(true);
+                        Shadow3.gameObject.SetActive(true);
                         Shadow2.gameObject.SetActive(false);
                         Shadow3.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
@@ -96,9 +96,9 @@ public class Shadow : MonoBehaviour
                         Shadow3.gameObject.SetActive(false);
                         break;
                     case 4:
-                        Shadow3.gameObject.SetActive(true);
-                        Shadow1.gameObject.SetActive(false);
+                        Shadow1.gameObject.SetActive(true);
                         Shadow2.gameObject.SetActive(false);
+                        Shadow3.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
                         break;
                 }
@@ -150,14 +150,14 @@ public class Shadow : MonoBehaviour
                         break;
 
                     case 2:
-                        Shadow3.gameObject.SetActive(true);
+                        Shadow2.gameObject.SetActive(true);
                         Shadow1.gameObject.SetActive(false);
-                        Shadow2.gameObject.SetActive(false);
+                        Shadow3.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
                         break;
                     case 3:
-                        Shadow2.gameObject.SetActive(true);
-                        Shadow3.gameObject.SetActive(false);
+                        Shadow3.gameObject.SetActive(true);
+                        Shadow2.gameObject.SetActive(false);
                         Shadow4.gameObject.SetActive(false);
                         Shadow1.gameObject.SetActive(false);
                         break;
