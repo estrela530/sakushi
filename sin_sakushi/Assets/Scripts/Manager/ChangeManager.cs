@@ -16,17 +16,15 @@ public class ChangeManager : MonoBehaviour
     void Start()
     {
         outRotate.enabled = true;
-        inRotate.enabled = false;
+        inRotate.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        //内外どっちを回すかの変更
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            outRotate.enabled = !outRotate.enabled;
-            inRotate.enabled = !inRotate.enabled;
-
             modeManager.ChangeInOut();
         }
     }
